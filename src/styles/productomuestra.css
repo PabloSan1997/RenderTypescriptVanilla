@@ -1,0 +1,91 @@
+.contenedor_producto{
+    display: flex;
+    width: 96%;
+    margin:3% auto;
+    &.quitar{
+        display: none;
+    }
+    .caja{
+        width: 60%;
+        display: flex;
+        .foto{
+           max-width: 80%;
+            margin: auto;
+            border: 2px solid black;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            .slider{
+                height: 100%;
+                display: flex;
+                .slide{
+                    width: 100%;
+                    height: 100%;
+                    & img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        &.des{
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+            height: 100%;
+            width: 40%;
+           & p{
+                font-family: Arial, Helvetica, sans-serif;
+                margin-bottom: 2%;
+                &.precio{
+                    font-size: 4.5rem;
+                    margin-top: auto;
+                }
+                &.descripcion{
+                    max-width: 90%;
+                    font-size: 1.4rem;
+                    text-align: justify;
+                }
+                &.param{
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    & span{
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:710px){
+    header{
+        .regresar{
+            margin: auto 2% auto auto;
+        }
+       & h1{
+            font-size: 1.6rem;
+            max-width: 50%;
+        }
+    }
+    .contenedor_producto{
+        flex-direction: column;
+        .caja{
+          width: 100%;
+            &.des{
+               width: 90%;
+               margin-top: 8%;
+               & p{
+                    margin:0 auto 5% auto;
+                    width: 80%;
+                    &.descripcion{
+                       font-size: 1.2rem;
+                    }
+                    &.param{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
